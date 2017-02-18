@@ -1,25 +1,34 @@
 <div class="padding main-div">
-        <h1>Timestamp Microservice</h1>
-        <div class="inset-div">
-            <p>
-                <strong>
-                  User stories:
-                </strong>
-            </p>
-            <div class="push-left">
-              <p>
-                  1) I can pass a string as a parameter, and it will check to see whether that string contains either a unix timestamp or a natural language date (example: January 1, 2016)
-              </p>
-              <p>
-                  2) If it does, it returns both the Unix timestamp and the natural language form of that date.
-              </p>
-              <p>
-                  3) If it does not contain a date or Unix timestamp, it returns null for those properties.
-              </p>
-            </div>
-Example Usage
+    <h1>Request Header Parser Microservice</h1>
+    <div class="inset-div">
+        <p>
+            <strong>
+              User story:
+            </strong>
+        </p>
+        <div class="push-left">
+          <p>
+               I can get the IP address, language and operating system for my browser
+          </p>
+        </div>
+    </div>
+    <p>
+      <strong>
+        Example usage:
+      </strong>
+    </p>
 <pre>
-<a href="https://limitless-peak-23778.herokuapp.com/December%2015,%202015">https://limitless-peak-23778.herokuapp.com/December%2015,%202015</a>
-<a href="https://limitless-peak-23778.herokuapp.com/December%2015,%202015">https://limitless-peak-23778.herokuapp.com/1450137600</a></pre>
-Example output:
-<pre>{ "unix": 1450137600, "natural": "December 15, 2015" }</pre>
+<a href="https://stormy-journey-92815.herokuapp.com/api/whoami">https://stormy-journey-92815.herokuapp.com/api/whoami</a>
+</pre>
+    <p>
+      <strong>
+        Example output:
+      </strong>
+    </p>
+<pre>
+{
+ipaddress: "82.22.161.154",
+language: "en-GB",
+software: "Macintosh; Intel Mac OS X 10_11_6"
+}</pre>
+</div>
