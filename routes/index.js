@@ -11,8 +11,9 @@ router.get("/api/whoami", function(req, res, next){
   let json_response = {
     software: req.headers["user-agent"].match(/\((.*?)\)/g)[0].replace(/(\(|\))/g, ""),
     language: req.headers["accept-language"].split(",")[0],
-    ip: req.ip
+    ip: req.headers["x-forwarded-for"]
   }
+  console.log(req.headers);
   res.json(json_response);
 });
 
