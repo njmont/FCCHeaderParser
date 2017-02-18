@@ -9,11 +9,10 @@ router.get("/", function(req, res, next){
 router.get("/api/whoami", function(req, res, next){
   "use strict";
   let json_response = {
-    software: req.headers["user-agent"].match(/\((.*?)\)/g)[0].replace(/(\(|\))/g, ""),
+    ip: req.headers["x-forwarded-for"],
     language: req.headers["accept-language"].split(",")[0],
-    ip: req.headers["x-forwarded-for"]
+    software: req.headers["user-agent"].match(/\((.*?)\)/g)[0].replace(/(\(|\))/g, "")
   }
-  console.log(req.headers);
   res.json(json_response);
 });
 
