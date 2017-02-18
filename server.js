@@ -15,11 +15,11 @@ app.listen(3000, function () {
 })
 
 /* GET home page. */
-router.get("/", function(req, res, next){
+app.get("/", function(req, res, next){
   res.render("index", {});
 })
 
-router.get("/api/whoami", function(req, res, next){
+app.get("/api/whoami", function(req, res, next){
   "use strict";
   let json_response = {
     ip: req.headers["x-forwarded-for"],
@@ -29,7 +29,7 @@ router.get("/api/whoami", function(req, res, next){
   res.json(json_response);
 });
 
-router.get("/api", function(req, res, next){
+app.get("/api", function(req, res, next){
   res.render("index", {});
 })
 
